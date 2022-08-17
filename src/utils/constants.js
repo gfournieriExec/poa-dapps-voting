@@ -1,5 +1,5 @@
 let constants = {}
-constants.organization = 'poanetwork'
+constants.organization = 'gfournieriExec'
 constants.repoName = 'poa-chain-spec'
 constants.addressesSourceFile = 'contracts.json'
 constants.ABIsSources = {
@@ -22,9 +22,9 @@ constants.NEW_MINING_KEY = {
   value: '0x0000000000000000000000000000000000000000'
 }
 
-constants.minBallotDurationInDays = 2
+constants.minBallotDurationInHours = 1
 constants.startTimeOffsetInMinutes = 5
-constants.endTimeDefaultInMinutes = 2890
+constants.endTimeDefaultInMinutes = 70
 constants.getTransactionReceiptInterval = 5000
 constants.rootPath = '/poa-dapps-voting'
 
@@ -55,6 +55,9 @@ constants.SOKOL = 'sokol'
 constants.CORE = 'core'
 constants.DAI = 'dai'
 constants.KOVAN = 'kovan'
+constants.VIVIANI = 'viviani'
+constants.BELLECOUR = 'bellecour'
+constants.MACHAINE = 'main'
 
 constants.NETWORKS = {
   '42': {
@@ -80,6 +83,24 @@ constants.NETWORKS = {
     RPC: 'https://dai.poa.network',
     BRANCH: constants.DAI,
     TESTNET: false
+  },
+  '133': {
+    NAME: 'vRLC',
+    RPC: 'https://viviani.iex.ec',
+    BRANCH: constants.VIVIANI,
+    TESTNET: true
+  },
+  '134': {
+    NAME: 'xRLC',
+    RPC: 'https://bellecour.iex.ec',
+    BRANCH: constants.BELLECOUR,
+    TESTNET: false
+  },
+  '8995': {
+    NAME: 'RLC',
+    RPC: 'http://127.0.0.1:8555/',
+    BRANCH: constants.MACHAINE,
+    TESTNET: true
   }
 }
 

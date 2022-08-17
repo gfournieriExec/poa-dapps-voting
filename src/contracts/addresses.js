@@ -1,11 +1,11 @@
 import { addressesURL, wrongRepoAlert } from './helpers'
 // const local = {
-//     VOTING_TO_CHANGE_KEYS_ADDRESS: '0xecdbe3937cf6ff27f70480855cfe03254f915b48',
-//     VOTING_TO_CHANGE_MIN_THRESHOLD_ADDRESS: '0x5ae30d4c8892292e0d8164f87a2e12dff9dc99e1',
-//     VOTING_TO_CHANGE_PROXY_ADDRESS: '0x6c221df3695ac13a7f9366568ec069c353d273b8',
-//     BALLOTS_STORAGE_ADDRESS: '0x5d6573e62e3688e40c1fc36e01b155fb0006f432',
-//     METADATA_ADDRESS: '0x93eba9d9de66133fcde35775e9da593edd59a4e3',
-//     POA_ADDRESS: '0xf472e0e43570b9afaab67089615080cf7c20018d',
+//     VOTING_TO_CHANGE_KEYS_ADDRESS: '0xc05fca516a563c9d065f79199a243551020730e6',
+//     VOTING_TO_CHANGE_MIN_THRESHOLD_ADDRESS: '0xfef099f0aa5edf3d3d4e3519fe94aa72ca779e5a',
+//     VOTING_TO_CHANGE_PROXY_ADDRESS: '0xec7a17ce76181f39b7f256e7ea3d8f88a445c99d',
+//     BALLOTS_STORAGE_ADDRESS: '0x572bc8320f6956e646d3a0256dc9688d49bf34ce',
+//     METADATA_ADDRESS: '0xd669393fde81d81997959e06562e3826bea2b1ca',
+//     POA_ADDRESS: '0x2f1b5e6c9d4013664a7f119a40b093395a26b7a0',
 // }
 
 let ADDRESSES = {}
@@ -19,7 +19,7 @@ async function getContractsAddresses(branch) {
     return wrongRepoAlert(addr)
   }
 
-  const contracts = await response.json()
+  const contracts = require('../contracts.json')
 
   ADDRESSES = contracts
 }
