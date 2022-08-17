@@ -7,7 +7,7 @@ export default class BallotsStorage {
     const { BALLOTS_STORAGE_ADDRESS } = networkAddresses()
     console.log('Ballots Storage address', BALLOTS_STORAGE_ADDRESS)
 
-    const ballotsStorageAbi = await helpers.getABI(constants.NETWORKS[netId].BRANCH, 'BallotStorage')
+    const ballotsStorageAbi = await helpers.getABI(constants.NETWORKS[netId].BRANCH, 'BallotsStorage')
 
     this.instance = new web3.eth.Contract(ballotsStorageAbi, BALLOTS_STORAGE_ADDRESS)
   }
